@@ -393,7 +393,7 @@ angle_t HWDrawInfo::FrustumAngle()
 	{
 		float tilt = fabs(Viewpoint.HWAngles.Pitch.Degrees());
 
-		// If the pitch is larger than this you can look all around at a FOV of 90Â°
+		// If the pitch is larger than this you can look all around at a FOV of 90°
 		if (tilt > 46.0f) return 0xffffffff;
 
 		// ok, this is a gross hack that barely works...
@@ -717,9 +717,9 @@ static ETraceStatus TraceCallbackForDitherTransparency(FTraceResults& res, void*
 		{
 			sector_t* linesec = res.Line->sidedef[res.Side]->sector;
 			if (linesec->subsectorcount > 0 && (*CurMapSections)[linesec->subsectors[0]->mapsection])
-			{
-				bf = res.Line->sidedef[res.Side]->sector->floorplane.ZatPoint(res.HitPos.XY());
-				bc = res.Line->sidedef[res.Side]->sector->ceilingplane.ZatPoint(res.HitPos.XY());
+		{
+			bf = res.Line->sidedef[res.Side]->sector->floorplane.ZatPoint(res.HitPos.XY());
+			bc = res.Line->sidedef[res.Side]->sector->ceilingplane.ZatPoint(res.HitPos.XY());
 				if (res.Line->sidedef[!res.Side])
 				{
 					// Two sided line! So let's find out if mid, top, or bottom texture needs dithered transparency
@@ -744,7 +744,7 @@ static ETraceStatus TraceCallbackForDitherTransparency(FTraceResults& res, void*
 		{
 			if (res.HitPos.Z == res.Sector->floorplane.ZatPoint(res.HitPos))
 			{
-				res.Sector->floorplane.dithertransflag = true;
+		res.Sector->floorplane.dithertransflag = true;
 			}
 			else if (res.Sector->e->XFloor.ffloors.Size()) // Maybe it was 3D floors
 			{
@@ -770,7 +770,7 @@ static ETraceStatus TraceCallbackForDitherTransparency(FTraceResults& res, void*
 		{
 			if (res.HitPos.Z == res.Sector->ceilingplane.ZatPoint(res.HitPos))
 			{
-				res.Sector->ceilingplane.dithertransflag = true;
+		res.Sector->ceilingplane.dithertransflag = true;
 			}
 			else if (res.Sector->e->XFloor.ffloors.Size()) // Maybe it was 3D floors
 			{

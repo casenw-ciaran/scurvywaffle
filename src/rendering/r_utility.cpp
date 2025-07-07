@@ -553,8 +553,8 @@ void R_InterpolateView(FRenderViewpoint& viewPoint, const player_t* const player
 			if (viewPoint.IsAllowedOoB() && prevPortalGroup != curPortalGroup) viewPoint.Pos = iView->New.Pos;
 			else
 			{
-				const DVector2 portalOffset = viewLvl->Displacements.getOffset(prevPortalGroup, curPortalGroup);
-				viewPoint.Pos = iView->Old.Pos * inverseTicFrac + (iView->New.Pos - portalOffset) * ticFrac;
+			const DVector2 portalOffset = viewLvl->Displacements.getOffset(prevPortalGroup, curPortalGroup);
+			viewPoint.Pos = iView->Old.Pos * inverseTicFrac + (iView->New.Pos - portalOffset) * ticFrac;
 			}
 			viewPoint.Path[0] = viewPoint.Path[1] = iView->New.Pos;
 		}

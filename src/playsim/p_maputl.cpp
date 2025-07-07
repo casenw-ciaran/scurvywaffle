@@ -482,10 +482,10 @@ void AActor::LinkToWorld(FLinkContext *ctx, bool spawningmapthing, sector_t *sec
 			sprev = link;
 			*link = this;
 
-			// phares 3/16/98
-			//
-			// If sector_list isn't NULL, it has a collection of sector
-			// nodes that were just removed from this Thing.
+		// phares 3/16/98
+		//
+		// If sector_list isn't NULL, it has a collection of sector
+		// nodes that were just removed from this Thing.
 
 			// Collect the sectors the object will live in by looking at
 			// the existing sector_list and adding new nodes and deleting
