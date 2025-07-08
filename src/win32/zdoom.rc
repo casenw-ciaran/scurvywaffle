@@ -68,11 +68,11 @@ BEGIN
     "        BLOCK ""040904b0""\r\n"
     "        BEGIN\r\n"
     "            VALUE ""CompanyName"", "" ""\r\n"
-    "            VALUE ""FileDescription"", ""Griddle""\r\n"
+    "            VALUE ""FileDescription"", ""CaptainWayne""\r\n"
     "            VALUE ""FileVersion"", RC_FILEVERSION2\r\n"
-    "            VALUE ""InternalName"", ""Griddle""\r\n"
-    "            VALUE ""OriginalFilename"", ""griddle.exe""\r\n"
-    "            VALUE ""ProductName"", ""Griddle""\r\n"
+    "            VALUE ""InternalName"", ""CaptainWayne""\r\n"
+    "            VALUE ""OriginalFilename"", ""CaptainWayne.exe""\r\n"
+    "            VALUE ""ProductName"", ""CaptainWayne""\r\n"
     "            VALUE ""ProductVersion"", GIT_VERSION\r\n"
     "        END\r\n"
     "    END\r\n"
@@ -312,11 +312,11 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName", " "
-            VALUE "FileDescription", "Griddle " GIT_DESCRIPTION
+            VALUE "FileDescription", "CaptainWayne " GIT_DESCRIPTION
             VALUE "FileVersion", RC_FILEVERSION2
-            VALUE "InternalName", "Griddle"
-            VALUE "OriginalFilename", "griddle.exe"
-            VALUE "ProductName", "Griddle"
+            VALUE "InternalName", "CaptainWayne"
+            VALUE "OriginalFilename", "CaptainWayne.exe"
+            VALUE "ProductName", "CaptainWayne"
             VALUE "ProductVersion", GIT_DESCRIPTION
         END
     END
