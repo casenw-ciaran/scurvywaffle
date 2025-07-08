@@ -83,7 +83,7 @@ const char *GetVersionString();
 // SAVESIG should match SAVEVER.
 
 // extension for savegames
-#define SAVEGAME_EXT "rfds"
+#define SAVEGAME_EXT "wds"
 
 // MINSAVEVER is the minimum level snapshot version that can be loaded.
 #define MINSAVEVER 4556
@@ -93,20 +93,19 @@ const char *GetVersionString();
 #define SAVEVER 4560
 
 // This is so that derivates can use the same savegame versions without worrying about engine compatibility
-#define GAMESIG "RELENTLESSFRONTIER"
-#define SOUNDFONT "griddle_rf"
-#define BASEWAD "griddle_rf.pk3"
+#define GAMESIG "GRIDDLE"
+#define BASEWAD "griddle.pk3"
+// Set OPTIONALWAD to "" (null) to disable searching for it
 #define OPTIONALWAD ""
 #define GZDOOM 1
 #define VR3D_ENABLED
 
 // More stuff that needs to be different for derivatives.
-#define GAMENAME "Relentless Frontier"
-#define WGAMENAME L"Relentless Frontier"
-#define GAMENAMELOWERCASE "Relentless Frontier"
-#define CONFIGNAME "rfconfig"
-#define FORUM_URL "https://steamcommunity.com/app/1677900/discussions/"
-#define BUGS_FORUM_URL	"https://steamcommunity.com/app/1677900/discussions/"
+#define GAMENAME "Griddle"
+#define WGAMENAME L"Griddle"
+#define GAMENAMELOWERCASE "griddle"
+#define FORUM_URL "http://www.waffleironstudios.com"
+#define BUGS_FORUM_URL	"http://www.waffleironstudios.com"
 
 #if defined(__APPLE__) || defined(_WIN32)
 #define GAME_DIR GAMENAME

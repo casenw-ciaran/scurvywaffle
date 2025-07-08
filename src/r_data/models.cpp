@@ -600,7 +600,7 @@ void RenderFrameModels(FModelRenderer *renderer, FLevelLocals *Level, const FSpr
 	for (unsigned i = 0; i < frameinfo.modelsamount; i++)
 	{
 		if (CalcModelOverrides(i, smf, modelData, frameinfo, drawinfo, is_decoupled))
-				{
+		{
 			RenderModelFrame(renderer, i, smf, modelData, frameinfo, drawinfo, is_decoupled, tic, translation, boneStartingPosition, evaluatedSingle);
 		}
 	}
@@ -1118,19 +1118,19 @@ void ParseModelDefLump(int Lump)
 FSpriteModelFrame * FindModelFrameRaw(const AActor * actorDefaults, const PClass * ti, int sprite, int frame, bool dropped)
 {
 	if(actorDefaults->hasmodel)
-		{
-			FSpriteModelFrame smf;
+	{
+		FSpriteModelFrame smf;
 
-			memset(&smf, 0, sizeof(smf));
+		memset(&smf, 0, sizeof(smf));
 		smf.type = ti;
 		smf.sprite = sprite;
 		smf.frame = frame;
 
-			int hash = SpriteModelHash[ModelFrameHash(&smf) % SpriteModelFrames.Size()];
+		int hash = SpriteModelHash[ModelFrameHash(&smf) % SpriteModelFrames.Size()];
 
-			while (hash>=0)
-			{
-				FSpriteModelFrame * smff = &SpriteModelFrames[hash];
+		while (hash>=0)
+		{
+			FSpriteModelFrame * smff = &SpriteModelFrames[hash];
 			if (smff->type == ti && smff->sprite == sprite && smff->frame == frame) return smff;
 			hash = smff->hashnext;
 		}

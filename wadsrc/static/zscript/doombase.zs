@@ -871,7 +871,7 @@ class Ceiling : MovingCeiling native
 		crushHexen = 1,
 		crushSlowdown = 2
 	}
-	
+
 	// 1 = up, 0 = waiting, -1 = down
 	enum EDirection
 	{

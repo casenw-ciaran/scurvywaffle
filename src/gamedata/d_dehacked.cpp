@@ -1270,11 +1270,11 @@ static int PatchThing (int thingy, int flags)
 			// defined, then override the Height field accordingly.
 			if(!hadPhysHeight)
 			{
-			info->Height = DEHToDouble(val);
+				info->Height = DEHToDouble(val);
 			}
 			if(!hadProjHeight)
 			{
-			info->projectilepassheight = 0;	// needs to be disabled
+				info->projectilepassheight = 0;	// needs to be disabled
 			}
 			hadHeight = true;
 		}

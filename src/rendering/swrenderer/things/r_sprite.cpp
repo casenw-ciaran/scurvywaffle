@@ -221,25 +221,25 @@ namespace swrenderer
 						float radius = node->lightsource->GetRadius();
 						if (radius * radius >= LdotL)
 						{
-						float distance = sqrt(LdotL);
-						float attenuation = 1.0f - distance / radius;
-						if (attenuation > 0.0f)
-						{						
-							float red = light->GetRed() * (1.0f / 255.0f);
-							float green = light->GetGreen() * (1.0f / 255.0f);
-							float blue = light->GetBlue() * (1.0f / 255.0f);
-							/*if (light->IsSubtractive())
-							{
-								float bright = FVector3(lr, lg, lb).Length();
-								FVector3 lightColor(lr, lg, lb);
-								red = (bright - lr) * -1;
-								green = (bright - lg) * -1;
-								blue = (bright - lb) * -1;
-							}*/
-						
-							lit_red += red * attenuation;
-							lit_green += green * attenuation;
-							lit_blue += blue * attenuation;
+							float distance = sqrt(LdotL);
+							float attenuation = 1.0f - distance / radius;
+							if (attenuation > 0.0f)
+							{						
+								float red = light->GetRed() * (1.0f / 255.0f);
+								float green = light->GetGreen() * (1.0f / 255.0f);
+								float blue = light->GetBlue() * (1.0f / 255.0f);
+								/*if (light->IsSubtractive())
+								{
+									float bright = FVector3(lr, lg, lb).Length();
+									FVector3 lightColor(lr, lg, lb);
+									red = (bright - lr) * -1;
+									green = (bright - lg) * -1;
+									blue = (bright - lb) * -1;
+								}*/
+							
+								lit_red += red * attenuation;
+								lit_green += green * attenuation;
+								lit_blue += blue * attenuation;
 							}
 						}
 					}
