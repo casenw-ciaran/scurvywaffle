@@ -68,12 +68,12 @@ BEGIN
     "        BLOCK ""040904b0""\r\n"
     "        BEGIN\r\n"
     "            VALUE ""CompanyName"", "" ""\r\n"
-    "            VALUE ""FileDescription"", ""Relentless Frontier""\r\n"
-    "            VALUE ""FileVersion"", RC_FILEVERSION2\r\n"
-    "            VALUE ""InternalName"", ""Relentless Frontier""\r\n"
-    "            VALUE ""OriginalFilename"", ""rfgzdoom.exe""\r\n"
-    "            VALUE ""ProductName"", ""Relentless Frontier""\r\n"
-    "            VALUE ""ProductVersion"", GIT_VERSION\r\n"
+    "            VALUE ""FileDescription"", ""Captain Wayne - Vacation Desperation""\r\n"
+    "            VALUE ""FileVersion"", ""1.0""\r\n"
+    "            VALUE ""InternalName"", ""Captain Wayne - Vacation Desperation""\r\n"
+    "            VALUE ""OriginalFilename"", ""CaptainWayne.exe""\r\n"
+    "            VALUE ""ProductName"", ""Captain Wayne - Vacation Desperation""\r\n"
+    "            VALUE ""ProductVersion"", ""1.0""\r\n"
     "        END\r\n"
     "    END\r\n"
     "    BLOCK ""VarFileInfo""\r\n"
@@ -311,13 +311,13 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", " "
-            VALUE "FileDescription", "Relentless Frontier " GIT_DESCRIPTION
-            VALUE "FileVersion", RC_FILEVERSION2
-            VALUE "InternalName", "Relentless Frontier"
-            VALUE "OriginalFilename", "rfgzdoom.exe"
-            VALUE "ProductName", "Relentless Frontier"
-            VALUE "ProductVersion", GIT_DESCRIPTION
+            VALUE "CompanyName", "Ciaran Games LLC"
+            VALUE "FileDescription", "Captain Wayne - Vacation Desperation" GIT_DESCRIPTION
+            VALUE "FileVersion", "1.0"
+            VALUE "InternalName", "Captain Wayne - Vacation Desperation"
+            VALUE "OriginalFilename", "CaptainWayne.exe"
+            VALUE "ProductName", "Captain Wayne - Vacation Desperation"
+            VALUE "ProductVersion", "Captain Wayne is in this game."
         END
     END
     BLOCK "VarFileInfo"
