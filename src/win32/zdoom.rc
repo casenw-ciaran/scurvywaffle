@@ -68,11 +68,11 @@ BEGIN
     "        BLOCK ""040904b0""\r\n"
     "        BEGIN\r\n"
     "            VALUE ""FileDescription"", ""CaptainWayne""\r\n"
-    "            VALUE ""FileVersion"", RC_FILEVERSION2\r\n"
+    "            VALUE ""FileVersion"", ""1.0""\r\n"
     "            VALUE ""InternalName"", ""CaptainWayne""\r\n"
     "            VALUE ""OriginalFilename"", ""CaptainWayne.exe""\r\n"
     "            VALUE ""ProductName"", ""CaptainWayne""\r\n"
-    "            VALUE ""ProductVersion"", GIT_VERSION\r\n"
+    "            VALUE ""ProductVersion"", ""1.0""\r\n"
     "    END\r\n"
     "    BLOCK ""VarFileInfo""\r\n"
     "    BEGIN\r\n"
@@ -310,12 +310,12 @@ BEGIN
         BLOCK "040904b0"
         BEGIN
             VALUE "CompanyName", "Ciaran Games LLC"
-            VALUE "FileDescription", "CaptainWayne" GIT_DESCRIPTION
-            VALUE "FileVersion", RC_FILEVERSION2
+            VALUE "FileDescription", "CaptainWayne"
+            VALUE "FileVersion", "1.0"
             VALUE "InternalName", "CaptainWayne"
             VALUE "OriginalFilename", "CaptainWayne.exe"
             VALUE "ProductName", "CaptainWayne"
-            VALUE "ProductVersion", GIT_VERSION
+            VALUE "ProductVersion", "1.0"
         END
     END
     BLOCK "VarFileInfo"
