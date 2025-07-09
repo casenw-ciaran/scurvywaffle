@@ -793,7 +793,7 @@ void GetPackets (void)
 			}
 			continue;			// extra setup packet
 		}
-
+						
 		netnode = doomcom.remotenode;
 		netconsole = playerfornode[netnode] & ~PL_DRONE;
 
@@ -2425,7 +2425,7 @@ void Net_DoCommand (int type, uint8_t **stream, int player)
 						{
 							if (type == DEM_SUMMONFRIEND || type == DEM_SUMMONFRIEND2 || type == DEM_SUMMONMBF)
 							{
-								if (spawned->CountsAsKill())
+								if (spawned->CountsAsKill()) 
 								{
 									primaryLevel->total_monsters--;
 								}
@@ -2590,7 +2590,7 @@ void Net_DoCommand (int type, uint8_t **stream, int player)
 				if ((unsigned)i < countof(arg))
 				{
 					arg[i] = argval;
-			}
+				}
 			}
 			if (!CheckCheatmode(player == consoleplayer))
 			{
@@ -2663,12 +2663,12 @@ void Net_DoCommand (int type, uint8_t **stream, int player)
 		}
 		break;
 	case DEM_REMOVE:
-		{
-			s = ReadStringConst(stream);
-			int removecount = 0;
-			PClassActor *cls = PClass::FindActor(s);
+	{
+		s = ReadStringConst(stream);
+		int removecount = 0;
+		PClassActor *cls = PClass::FindActor(s);
 		if (cls != NULL && cls->IsDescendantOf(RUNTIME_CLASS(AActor)))
-			{
+		{
 				removecount = RemoveClass(primaryLevel, cls);
 				const PClass *cls_rep = cls->GetReplacement(primaryLevel);
 				if (cls != cls_rep)
@@ -2681,7 +2681,7 @@ void Net_DoCommand (int type, uint8_t **stream, int player)
 			{
 				Printf("%s is not an actor class.\n", s);
 			}
-		}
+	}
 		break;
 
 	case DEM_CONVREPLY:
@@ -2778,7 +2778,7 @@ void Net_DoCommand (int type, uint8_t **stream, int player)
 			FNetworkCommand netCmd = { player, cmd, buffer };
 			primaryLevel->localEventManager->NetCommand(netCmd);
 		}
-		break;
+	break;
 
 	case DEM_CHANGESKILL:
 		NextSkill = ReadInt32(stream);
@@ -2808,7 +2808,7 @@ static void RunScript(uint8_t **stream, AActor *pawn, int snum, int argn, int al
 		if ((unsigned)i < countof(arg))
 		{
 			arg[i] = argval;
-	}
+		}
 	}
 	P_StartScript(pawn->Level, pawn, NULL, snum, primaryLevel->MapName.GetChars(), arg, min<int>(countof(arg), argn), ACS_NET | always);
 }

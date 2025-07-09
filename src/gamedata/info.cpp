@@ -787,7 +787,7 @@ static void SummonActor (int command, int command2, FCommandLine argv)
 			if(!type || !type->IsDescendantOf("VisualThinker"))
 			{
 				Printf ("Unknown actor or visual thinker '%s'\n", argv[1]);
-				return;
+			return;
 			}
 		}
 		Net_WriteInt8 (argv.argc() > 2 ? command2 : command);

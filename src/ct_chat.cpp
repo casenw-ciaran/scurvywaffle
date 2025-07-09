@@ -254,15 +254,15 @@ void CT_Drawer (void)
 
 		if(StatusBar)
 		{
-			IFVIRTUALPTR(StatusBar, DBaseStatusBar, DrawChat)
-			{
-				FString txt = ChatQueue;
-				VMValue params[] = { (DObject*)StatusBar, &txt };
-				int rv;
-				VMReturn ret(&rv);
-				VMCall(func, params, countof(params), &ret, 1);
-				if (!!rv) return;
-			}
+		IFVIRTUALPTR(StatusBar, DBaseStatusBar, DrawChat)
+		{
+			FString txt = ChatQueue;
+			VMValue params[] = { (DObject*)StatusBar, &txt };
+			int rv;
+			VMReturn ret(&rv);
+			VMCall(func, params, countof(params), &ret, 1);
+			if (!!rv) return;
+		}
 		}
 
 		FStringf prompt("%s ", GStrings.GetString("TXT_SAY"));

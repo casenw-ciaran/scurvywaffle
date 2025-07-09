@@ -23,7 +23,7 @@ enum ESoundFlags
 	CHAN_OVERLAP = 8192,						// [MK] Does not stop any sounds in the channel and instead plays over them.
 
 	// Same as above, with an F appended to allow better distinction of channel and channel flags.
-	CHANF_DEFAULT = 0,			// just to make the code look better and avoid literal 0's.
+	CHANF_DEFAULT = 0,	// just to make the code look better and avoid literal 0's.
 	CHANF_LISTENERZ = 8,
 	CHANF_MAYBE_LOCAL = 16,
 	CHANF_UI = 32,				// Do not record sound in savegames.

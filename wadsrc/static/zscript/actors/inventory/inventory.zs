@@ -85,7 +85,7 @@ class Inventory : Actor
 		Inventory.PickupSound "misc/i_pkup";
 		Inventory.PickupMessage "$TXT_DEFAULTPICKUPMSG";
 	}
-
+	
 	override void OnLoad()
 	{
 		UpdateLocalPickupStatus();

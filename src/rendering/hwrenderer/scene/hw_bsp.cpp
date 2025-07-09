@@ -295,12 +295,12 @@ void HWDrawInfo::AddLine (seg_t *seg, bool portalclip)
 		endAngleR = clipperr.PointToPseudoAngle(seg->v1->fX(), seg->v1->fY());
 
 		if (startAngleR - endAngleR >= ANGLE_180)
-		{
+	{
 			if (!seg->backsector) clipperr.SafeAddClipRange(startAngleR - paddingR, endAngleR + paddingR);
-			else if((seg->sidedef != nullptr) && !uint8_t(seg->sidedef->Flags & WALLF_POLYOBJ) && (currentsector->sectornum != seg->backsector->sectornum))
-			{
-				if (in_area == area_default) in_area = hw_CheckViewArea(seg->v1, seg->v2, seg->frontsector, seg->backsector);
-				backsector = hw_FakeFlat(seg->backsector, in_area, true);
+		else if((seg->sidedef != nullptr) && !uint8_t(seg->sidedef->Flags & WALLF_POLYOBJ) && (currentsector->sectornum != seg->backsector->sectornum))
+		{
+			if (in_area == area_default) in_area = hw_CheckViewArea(seg->v1, seg->v2, seg->frontsector, seg->backsector);
+			backsector = hw_FakeFlat(seg->backsector, in_area, true);
 				if (hw_CheckClip(seg->sidedef, currentsector, backsector)) clipperr.SafeAddClipRange(startAngleR - paddingR, endAngleR + paddingR);
 				backsector = nullptr;
 			}
@@ -737,14 +737,14 @@ void HWDrawInfo::DoSubsector(subsector_t * sub)
 			{
 				if (!anglevisible)
 				{
-					angle_t startAngle = clipper.GetClipAngle(seg->v2);
-					angle_t endAngle = clipper.GetClipAngle(seg->v1);
-					if (startAngle-endAngle >= ANGLE_180) anglevisible |= clipper.SafeCheckRange(startAngle, endAngle);
+				angle_t startAngle = clipper.GetClipAngle(seg->v2);
+				angle_t endAngle = clipper.GetClipAngle(seg->v1);
+				if (startAngle-endAngle >= ANGLE_180) anglevisible |= clipper.SafeCheckRange(startAngle, endAngle);
 				}
 				if (!radarvisible)
 				{
-					angle_t startAngleR = clipperr.PointToPseudoAngle(seg->v2->fX(), seg->v2->fY());
-					angle_t endAngleR = clipperr.PointToPseudoAngle(seg->v1->fX(), seg->v1->fY());
+				angle_t startAngleR = clipperr.PointToPseudoAngle(seg->v2->fX(), seg->v2->fY());
+				angle_t endAngleR = clipperr.PointToPseudoAngle(seg->v1->fX(), seg->v1->fY());
 					if (startAngleR-endAngleR >= ANGLE_180) radarvisible |= clipperr.SafeCheckRange(startAngleR, endAngleR);
 				}
 

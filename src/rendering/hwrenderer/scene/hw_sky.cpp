@@ -321,9 +321,9 @@ void HWWall::SkyTop(HWWallDispatcher *di, seg_t * seg,sector_t * fs,sector_t * b
 				// Don't add intra-portal line to the portal.
 				if (!(di->di && di->di->Viewpoint.IsAllowedOoB()))
 				{
-					return;
-				}
+				return;
 			}
+		}
 		}
 		else
 		{
@@ -403,7 +403,7 @@ void HWWall::SkyBottom(HWWallDispatcher *di, seg_t * seg,sector_t * fs,sector_t 
 				// Don't add intra-portal line to the portal.
 				if (!(di->di && di->di->Viewpoint.IsAllowedOoB()))
 				{
-					return;
+				return;
 				}
 			}
 		}
