@@ -93,17 +93,17 @@ const char *GetVersionString();
 #define SAVEVER 4560
 
 // This is so that derivates can use the same savegame versions without worrying about engine compatibility
-#define GAMESIG "GRIDDLE"
-#define BASEWAD "griddle.pk3"
+#define GAMESIG "CaptainWayne"
+#define BASEWAD "scurvywaffle.pk3"
 // Set OPTIONALWAD to "" (null) to disable searching for it
 #define OPTIONALWAD ""
 #define GZDOOM 1
 #define VR3D_ENABLED
 
 // More stuff that needs to be different for derivatives.
-#define GAMENAME "Griddle"
-#define WGAMENAME L"Griddle"
-#define GAMENAMELOWERCASE "griddle"
+#define GAMENAME "CaptainWayne"
+#define WGAMENAME L"CaptainWayne"
+#define GAMENAMELOWERCASE "captainwayne"
 #define FORUM_URL "http://www.waffleironstudios.com"
 #define BUGS_FORUM_URL	"http://www.waffleironstudios.com"
 
