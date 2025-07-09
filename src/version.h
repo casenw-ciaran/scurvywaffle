@@ -83,7 +83,7 @@ const char *GetVersionString();
 // SAVESIG should match SAVEVER.
 
 // extension for savegames
-#define SAVEGAME_EXT "wds"
+#define SAVEGAME_EXT "rfds"
 
 // MINSAVEVER is the minimum level snapshot version that can be loaded.
 #define MINSAVEVER 4556
@@ -94,8 +94,8 @@ const char *GetVersionString();
 
 // This is so that derivates can use the same savegame versions without worrying about engine compatibility
 #define GAMESIG "CaptainWayne"
+#define SOUNDFONT "CaptainWayne"
 #define BASEWAD "scurvywaffle.pk3"
-// Set OPTIONALWAD to "" (null) to disable searching for it
 #define OPTIONALWAD ""
 #define GZDOOM 1
 #define VR3D_ENABLED
@@ -103,9 +103,10 @@ const char *GetVersionString();
 // More stuff that needs to be different for derivatives.
 #define GAMENAME "CaptainWayne"
 #define WGAMENAME L"CaptainWayne"
-#define GAMENAMELOWERCASE "captainwayne"
-#define FORUM_URL "http://www.waffleironstudios.com"
-#define BUGS_FORUM_URL	"http://www.waffleironstudios.com"
+#define GAMENAMELOWERCASE "CaptainWayne"
+#define CONFIGNAME "scurvywaffle"
+#define FORUM_URL "https://steamcommunity.com/app/2319790/discussions/"
+#define BUGS_FORUM_URL	"https://steamcommunity.com/app/2319790/discussions/"
 
 #if defined(__APPLE__) || defined(_WIN32)
 #define GAME_DIR GAMENAME
