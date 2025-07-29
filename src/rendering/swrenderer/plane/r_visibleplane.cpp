@@ -83,19 +83,19 @@ namespace swrenderer
 					VisiblePlaneLight *light_node = lights;
 					while (light_node)
 					{
-					if (light_node->lightsource == node->lightsource)
-					{
-						found = true;
-						break;
+						if (light_node->lightsource == node->lightsource)
+						{
+							found = true;
+							break;
+						}
+						light_node = light_node->next;
 					}
-					light_node = light_node->next;
-				}
-				if (!found)
-				{
-					VisiblePlaneLight *newlight = thread->FrameMemory->NewObject<VisiblePlaneLight>();
-					newlight->next = lights;
-					newlight->lightsource = node->lightsource;
-					lights = newlight;
+					if (!found)
+					{
+						VisiblePlaneLight *newlight = thread->FrameMemory->NewObject<VisiblePlaneLight>();
+						newlight->next = lights;
+						newlight->lightsource = node->lightsource;
+						lights = newlight;
 					}
 				}
 			node = node->nextLight;

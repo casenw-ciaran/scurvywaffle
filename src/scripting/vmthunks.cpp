@@ -2307,7 +2307,7 @@ void FormatMapName(FLevelLocals *self, int cr, FString *result)
 	{
 		if (!result->IsEmpty())
 			*result << ": ";
-	*result << mapnamecolor << self->LevelName;
+		*result << mapnamecolor << self->LevelName;
 	}
 }
 

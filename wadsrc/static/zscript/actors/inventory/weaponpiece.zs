@@ -59,7 +59,7 @@ class WeaponPiece : Inventory
 	
 	property number: PieceValue;
 	property weapon: WeaponClass;
-	
+
 	// Account for weapon replacers, but make sure it's still a Weapon
 	clearscope class<Weapon> GetWeaponClass() const
 	{
